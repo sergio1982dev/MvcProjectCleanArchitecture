@@ -1,11 +1,68 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "CleanArchMvc.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CleanArchMvc.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CleanArchMvc.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CleanArchMvc.Application.dll": {}
+        }
+      },
+      "CleanArchMvc.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CleanArchMvc.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CleanArchMvc.Domain.dll": {}
+        }
+      },
+      "CleanArchMvc.Infra.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CleanArchMvc.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CleanArchMvc.Infra.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CleanArchMvc.Infra.Data.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CleanArchMvc.Application/1.0.0": {
+      "type": "project",
+      "path": "../CleanArchMvc.Application/CleanArchMvc.Application.csproj",
+      "msbuildProject": "../CleanArchMvc.Application/CleanArchMvc.Application.csproj"
+    },
+    "CleanArchMvc.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CleanArchMvc.Domain/CleanArchMvc.Domain.csproj",
+      "msbuildProject": "../CleanArchMvc.Domain/CleanArchMvc.Domain.csproj"
+    },
+    "CleanArchMvc.Infra.Data/1.0.0": {
+      "type": "project",
+      "path": "../CleanArchMvc.Infra.Data/CleanArchMvc.Infra.Data.csproj",
+      "msbuildProject": "../CleanArchMvc.Infra.Data/CleanArchMvc.Infra.Data.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "CleanArchMvc.Application >= 1.0.0",
+      "CleanArchMvc.Domain >= 1.0.0",
+      "CleanArchMvc.Infra.Data >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\sergi\\.nuget\\packages\\": {},
@@ -14,11 +71,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Programaçao\\ProjetosAssistidos\\CleanArchitecture\\CleanArchMvc\\CleanArchMvc.Infra.IoC\\CleanArchMvc.Infra.IoC.csproj",
+      "projectUniqueName": "C:\\Programation\\Projects\\CleanArchitecture\\CleanArchMvc\\CleanArchMvc.Infra.IoC\\CleanArchMvc.Infra.IoC.csproj",
       "projectName": "CleanArchMvc.Infra.IoC",
-      "projectPath": "C:\\Programaçao\\ProjetosAssistidos\\CleanArchitecture\\CleanArchMvc\\CleanArchMvc.Infra.IoC\\CleanArchMvc.Infra.IoC.csproj",
+      "projectPath": "C:\\Programation\\Projects\\CleanArchitecture\\CleanArchMvc\\CleanArchMvc.Infra.IoC\\CleanArchMvc.Infra.IoC.csproj",
       "packagesPath": "C:\\Users\\sergi\\.nuget\\packages\\",
-      "outputPath": "C:\\Programaçao\\ProjetosAssistidos\\CleanArchitecture\\CleanArchMvc\\CleanArchMvc.Infra.IoC\\obj\\",
+      "outputPath": "C:\\Programation\\Projects\\CleanArchitecture\\CleanArchMvc\\CleanArchMvc.Infra.IoC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -38,7 +95,17 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Programation\\Projects\\CleanArchitecture\\CleanArchMvc\\CleanArchMvc.Application\\CleanArchMvc.Application.csproj": {
+              "projectPath": "C:\\Programation\\Projects\\CleanArchitecture\\CleanArchMvc\\CleanArchMvc.Application\\CleanArchMvc.Application.csproj"
+            },
+            "C:\\Programation\\Projects\\CleanArchitecture\\CleanArchMvc\\CleanArchMvc.Domain\\CleanArchMvc.Domain.csproj": {
+              "projectPath": "C:\\Programation\\Projects\\CleanArchitecture\\CleanArchMvc\\CleanArchMvc.Domain\\CleanArchMvc.Domain.csproj"
+            },
+            "C:\\Programation\\Projects\\CleanArchitecture\\CleanArchMvc\\CleanArchMvc.Infra.Data\\CleanArchMvc.Infra.Data.csproj": {
+              "projectPath": "C:\\Programation\\Projects\\CleanArchitecture\\CleanArchMvc\\CleanArchMvc.Infra.Data\\CleanArchMvc.Infra.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
